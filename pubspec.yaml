@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   decorated_flutter: ^0.12.0+1
-  permission_handler: ^4.4.0+hotfix.2
+  permission_handler: ^5.0.0+hotfix.3
 
 dev_dependencies:
   flutter_test:
