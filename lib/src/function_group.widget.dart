@@ -1,6 +1,7 @@
+import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
-class FunctionGroup extends StatelessWidget {
+class FunctionGroup extends StatefulWidget {
   const FunctionGroup({
     Key key,
     @required this.headLabel,
@@ -11,26 +12,41 @@ class FunctionGroup extends StatelessWidget {
   final List<Widget> children;
 
   @override
+  _FunctionGroupState createState() => _FunctionGroupState();
+}
+
+class _FunctionGroupState extends State<FunctionGroup> {
+  bool _opened = false;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Column(
+          DecoratedColumn(
+            onPressed: _handleToggle,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Text(headLabel,
+                child: Text(widget.headLabel,
                     style: Theme.of(context).textTheme.headline),
               ),
               Divider(height: 1, indent: 16),
             ],
           ),
-        ]..addAll(children),
+          if (_opened) ...widget.children,
+        ],
       ),
     );
+  }
+
+  void _handleToggle(BuildContext context) {
+    setState(() {
+      _opened = !_opened;
+    });
   }
 }
