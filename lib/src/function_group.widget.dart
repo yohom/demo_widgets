@@ -29,11 +29,22 @@ class _FunctionGroupState extends State<FunctionGroup> {
             onPressed: _handleToggle,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
+              DecoratedRow(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Text(widget.headLabel,
-                    style: Theme.of(context).textTheme.headline),
+                children: [
+                  Text(
+                    widget.headLabel,
+                    style: Theme.of(context).textTheme.headline,
+                  ),
+                  Spacer(),
+                  Icon(
+                    _opened
+                        ? Icons.keyboard_arrow_up
+                        : Icons.keyboard_arrow_down,
+                  ),
+                  SPACE_NORMAL_HORIZONTAL,
+                ],
               ),
               Divider(height: 1, indent: 16),
             ],
