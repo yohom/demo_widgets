@@ -5,10 +5,12 @@ class FunctionGroup extends StatefulWidget {
   const FunctionGroup({
     Key key,
     @required this.headLabel,
+    this.opened = false,
     this.children = const [],
   }) : super(key: key);
 
   final String headLabel;
+  final bool opened;
   final List<Widget> children;
 
   @override
@@ -16,7 +18,13 @@ class FunctionGroup extends StatefulWidget {
 }
 
 class _FunctionGroupState extends State<FunctionGroup> {
-  bool _opened = false;
+  bool _opened;
+
+  @override
+  void initState() {
+    super.initState();
+    _opened = widget.opened;
+  }
 
   @override
   Widget build(BuildContext context) {
