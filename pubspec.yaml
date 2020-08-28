@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  decorated_flutter: ^0.12.14
+  decorated_flutter: ^0.18.0
 
 dev_dependencies:
   flutter_test:
