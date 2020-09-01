@@ -1,6 +1,6 @@
 name: demo_widgets
 description: A new Flutter project.
-version: 0.2.0
+version: 0.2.1
 author: yohom <yohombao@qq.com>
 homepage: https://github.com/yohom/demo_widgets
 
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   decorated_flutter: ^0.18.0
+  flutter_syntax_view: ^1.0.0
 
 dev_dependencies:
   flutter_test:
