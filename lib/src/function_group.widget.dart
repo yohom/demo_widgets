@@ -51,7 +51,7 @@ class _FunctionGroupState extends State<FunctionGroup> {
                         ? Icons.keyboard_arrow_up
                         : Icons.keyboard_arrow_down,
                   ),
-                  SPACE_NORMAL_HORIZONTAL,
+                  SPACE_8_HORIZONTAL,
                 ],
               ),
               Divider(height: 1, indent: 16),
