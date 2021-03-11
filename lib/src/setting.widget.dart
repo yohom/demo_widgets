@@ -41,7 +41,7 @@ class _ContinuousSettingState extends State<ContinuousSetting> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(widget.head, style: Theme.of(context).textTheme.subhead),
-          SPACE_NORMAL,
+          SPACE_8,
           Slider(
             value: _value,
             min: widget.min,
