@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class FunctionGroup extends StatefulWidget {
   const FunctionGroup({
-    Key key,
-    @required this.headLabel,
+    Key? key,
+    required this.headLabel,
     this.opened = false,
     this.children = const [],
   }) : super(key: key);
@@ -18,7 +18,7 @@ class FunctionGroup extends StatefulWidget {
 }
 
 class _FunctionGroupState extends State<FunctionGroup> {
-  bool _opened;
+  late bool _opened;
 
   @override
   void initState() {
