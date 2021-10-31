@@ -43,7 +43,7 @@ class _FunctionGroupState extends State<FunctionGroup> {
                 children: [
                   Text(
                     widget.headLabel,
-                    style: Theme.of(context).textTheme.headline,
+                    style: Theme.of(context).textTheme.headline4,
                   ),
                   Spacer(),
                   Icon(
