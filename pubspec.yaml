@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  decorated_flutter: ^0.28.1
+  decorated_flutter: ^0.40.0-dev.1
   flutter_syntax_view: ^4.0.0
 
 dev_dependencies:
